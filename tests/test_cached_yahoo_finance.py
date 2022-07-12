@@ -6,6 +6,8 @@ def test_version():
 
 
 def test_tutorial():
+    from yahoo_finance_cache import CachedYahooDataReader
+    
     # Store the cached data in a directory called 'cache'
     yahoo_data_reader = CachedYahooDataReader('cache')
 
