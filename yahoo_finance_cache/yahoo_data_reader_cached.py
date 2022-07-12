@@ -44,6 +44,7 @@ class CachedYahooDataReader:
         try:
             # Open cached data with datetime objects as the indices
             df = pd.read_csv(self.cache_dir / f'{ticker}.csv', index_col=0, parse_dates=True)
+            df.astype(float)
         except FileNotFoundError:
             # Get data from Yahoo Finance
             logging.info('Cache miss for {}. Getting data from Yahoo Finance.'.format(ticker))
