@@ -1,6 +1,6 @@
 A simple library for caching Yahoo finance data. Built on top of Pandas DataReader.
 
-# Usage
+## Usage
 
 ```python
 from cached_yahoo_finance import CachedYahooDataReader
