@@ -20,5 +20,6 @@ assert df.equals(df2), 'Data from cache and from Yahoo Finance should be the sam
 ## Install
 
 ```bash
-pip install yahoo-finance-cahce
+pip install yahoo-finance-cache
+```
 ```
