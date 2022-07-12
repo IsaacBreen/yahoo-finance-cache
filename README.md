@@ -6,7 +6,7 @@ A simple library for caching Yahoo finance data. Built on top of Pandas DataRead
 from cached_yahoo_finance import CachedYahooDataReader
 
 
-# Store the cached data in a directory called 'cache'
+# Cache data in a directory called 'cache'
 yahoo_data_reader = CachedYahooDataReader('cache')
 
 # Download stock data for Apple from Yahoo Finance
