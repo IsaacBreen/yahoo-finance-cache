@@ -11,7 +11,6 @@ yahoo_data_reader = CachedYahooDataReader('cache')
 
 # Download stock data for Apple from Yahoo Finance
 df = yahoo_data_reader.DataReader('AAPL', start_date='2021-01-01', end_date='2021-01-31')
-print(df)
 
 # Get the same data from the cache (will be much faster than downloading again)
 df2 = yahoo_data_reader.DataReader('AAPL', start_date='2021-01-01', end_date='2021-01-31')
