@@ -22,9 +22,9 @@ def test_tutorial():
 
 def test_dot_in_ticker():
     from yahoo_finance_cache import CachedYahooDataReader
-    
+
     TICKER = 'BRK.B'
-    
+
     # Cache the data in a directory called 'cache'
     yahoo_data_reader = CachedYahooDataReader('cache')
 
