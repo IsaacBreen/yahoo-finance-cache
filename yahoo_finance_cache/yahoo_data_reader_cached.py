@@ -52,9 +52,7 @@ class CachedYahooDataReader:
             df.astype(float)
         except FileNotFoundError:
             # Get data from Yahoo Finance
-            logging.info(
-                "Cache miss for {}. Getting data from Yahoo Finance.".format(ticker)
-            )
+            logging.info(f"Cache miss for {ticker}. Getting data from Yahoo Finance.")
             df = self.get_yahoo_data(ticker.replace('.', '-'), start_date, end_date)
             # Create the cache directory if it doesn't exist
             pathlib.Path("cache").mkdir(parents=True, exist_ok=True)
@@ -65,10 +63,9 @@ class CachedYahooDataReader:
         # Check there is a row for each day in the date range and download any missing data
         if len(df) != (end_date - start_date).days + 1:
             logging.info(
-                "Cache miss on some days for {}. Getting data from Yahoo Finance.".format(
-                    ticker
-                )
+                f"Cache miss on some days for {ticker}. Getting data from Yahoo Finance."
             )
+
             df_new = self.get_yahoo_data(ticker, start_date, end_date)
             # Remove any overlapping data
             df_new = df_new[~df_new.index.isin(df.index)]
